@@ -4,16 +4,46 @@ class Program
 {
 		static void Main()
 		{
-			string version = "v1.1";
+			string version = "v1.2";
 			Console.Title = "IMC Calculator " + version;
 			Console.Clear();
-			double Peso;
-			double Altura;
+			bool running = true;
+		
+			while (running) {
+			Console.WriteLine("1. Iniciar Calculadora");
+			Console.WriteLine("2. Salir");
+			Console.WriteLine("");
+			Console.Write("Seleccionar un numero valido: ");
+			string menuNum = Console.ReadLine();
+			switch (menuNum) {
+				case "1":
+				Console.Clear();
+				StartCalculator();
+				running = false;
+				break;
+				
+				case "2":
+				running = false;
+				break;
+				
+				default:
+				Console.Clear();
+				
+				Console.WriteLine($"Codigo {menuNum} no es un codigo existente");
+				break;
+			}
+			}
 			
+			
+			static void StartCalculator()
+			{
+			double Weight;
+			double Height;
+				
 			while (true) {
 				Console.Write("¿Cuanto pesas en kilogramos? ");
 				
-				if (double.TryParse(Console.ReadLine(), out Peso)) {
+				if (double.TryParse(Console.ReadLine(), out Weight)) {
 					break;
 				}
 				
@@ -26,7 +56,7 @@ class Program
 			while (true) {
 				Console.Write("¿Cuanto mides en metros? ");
 				
-				if (double.TryParse(Console.ReadLine(), out Altura)) {
+				if (double.TryParse(Console.ReadLine(), out Height)) {
 					break;
 				}
 				
@@ -35,9 +65,9 @@ class Program
 			}
 			
 			Console.Clear();
-			Console.WriteLine("Pesas: " + Peso + "kg");
-			Console.WriteLine("Mides: " + Altura + "m");
-			double imc = Peso / (Altura * Altura);
+			Console.WriteLine($"Pesas: {Weight}kg");
+			Console.WriteLine($"Mides: {Height}m");
+			double imc = Weight / (Height * Height);
 			
 			if (imc <= 18.5) {
 				Console.WriteLine($"Tienes un peso bajo con un IMC de: {imc:F1}");
@@ -48,7 +78,7 @@ class Program
 			} else {
 				Console.WriteLine($"Tienes obecidad con un IMC de: {imc:F1}");
 			}
-			
+			}
 			Console.ReadKey();
 		}
 }
