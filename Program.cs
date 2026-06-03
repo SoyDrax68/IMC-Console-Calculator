@@ -31,7 +31,7 @@ class Program
 				
 				Console.WriteLine($"Codigo {menuNum} no es un codigo existente");
 				break;
-			}
+				}
 			}
 			
 			
@@ -43,25 +43,25 @@ class Program
 			while (true) {
 				Console.Write("¿Cuanto pesas en kilogramos? ");
 				
-				if (double.TryParse(Console.ReadLine(), out Weight)) {
+				if (double.TryParse(Console.ReadLine(), out Weight) && Weight > 0 && Weight <= 635) {
 					break;
 				}
 				
 				Console.Clear();
-				Console.WriteLine("Error: introduce un numero valido.");
-			}
+				Console.WriteLine("Error: introduce un numero valido o peso valido (1-635 kg).");
+				}
 			
 			Console.Clear();
 			
 			while (true) {
 				Console.Write("¿Cuanto mides en metros? ");
 				
-				if (double.TryParse(Console.ReadLine(), out Height)) {
+				if (double.TryParse(Console.ReadLine(), out Height) && Height >= 1.00 && Height <= 2.95) {
 					break;
 				}
 				
 				Console.Clear();
-				Console.WriteLine("Error: introduce un numero valido.");
+				Console.WriteLine("Error: introduce un numero valido 0 altura valida (1.00-2.95 m).");
 			}
 			
 			Console.Clear();
