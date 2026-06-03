@@ -4,17 +4,37 @@ class Program
 {
 		static void Main()
 		{
-			string version = "Version v1.0";
-			Console.Title = "IMC Calculator";
+			string version = "v1.1";
+			Console.Title = "IMC Calculator " + version;
 			Console.Clear();
-			Console.Write("¿Cuanto pesas en kilogramos? ");
-			double Peso = double.Parse(Console.ReadLine());
-			Console.Clear();
-			Console.Write("¿Cuanto mides en metros? ");
-			double Altura = double.Parse(Console.ReadLine());
+			double Peso;
+			double Altura;
+			
+			while (true) {
+				Console.Write("¿Cuanto pesas en kilogramos? ");
+				
+				if (double.TryParse(Console.ReadLine(), out Peso)) {
+					break;
+				}
+				
+				Console.Clear();
+				Console.WriteLine("Error: introduce un numero valido.");
+			}
 			
 			Console.Clear();
 			
+			while (true) {
+				Console.Write("¿Cuanto mides en metros? ");
+				
+				if (double.TryParse(Console.ReadLine(), out Altura)) {
+					break;
+				}
+				
+				Console.Clear();
+				Console.WriteLine("Error: introduce un numero valido.");
+			}
+			
+			Console.Clear();
 			Console.WriteLine("Pesas: " + Peso + "kg");
 			Console.WriteLine("Mides: " + Altura + "m");
 			double imc = Peso / (Altura * Altura);
