@@ -1,18 +1,17 @@
-# IMC Console Calculator
+# BMI Console Calculator
 
-Calculadora de Índice de Masa Corporal (IMC) desarrollada en C# para consola.
+Body Mass Index (BMI) calculator developed in C# for console.
 
-El programa solicita el peso y la altura del usuario, calcula automáticamente el IMC y muestra el resultado junto con su clasificación correspondiente.
+The program asks for the user's weight and height, automatically calculates the BMI, and displays the result along with its corresponding rating.
 
-## Uso
+## Application 
+1. Run the app. 
+2. Enter your weight in kilograms.
+3. Enter your height in meters.
+4. The program will calculate and display your BMI.
 
-1. Ejecuta la aplicación.
-2. Ingresa tu peso en kilogramos.
-3. Ingresa tu altura en metros.
-4. El programa calculará y mostrará tu IMC.
+## Project Status
 
-## Estado del proyecto
+In development.
 
-En desarrollo.
-
-Se añadirán nuevas funcionalidades conforme avance el proyecto.
+New features will be added as the project progresses.
