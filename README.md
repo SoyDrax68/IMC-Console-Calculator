@@ -6,8 +6,8 @@ The program asks for the user's weight and height, automatically calculates the 
 
 ## Application 
 1. Run the app. 
-2. Enter your weight in kilograms.
-3. Enter your height in meters.
+2. Select the measurement system of your preference.
+3. Enter the requested data.
 4. The program will calculate and display your BMI.
 
 ## Project Status
